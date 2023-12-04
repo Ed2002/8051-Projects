@@ -1,10 +1,10 @@
 program01                                                                                                               PAGE 1
-                         1     ORG 0
-0000 7410                2     MOV A, #10H
-0002 7830                3     MOV R0, #30H
-0004 28                  4     ADD A, R0
-0005 F9                  5     MOV R1, A
-                         6     END
+                         1     ORG 0 ;Start
+0000 7410                2     MOV A, #10H ;Move 10 to @A register
+0002 7830                3     MOV R0, #30H ;Move 30 to @R0 register
+0004 28                  4     ADD A, R0 ;Add to @A register value @R0 register value
+0005 F9                  5     MOV R1, A ;Move @A register value to @R0 register
+                         6     END ;End
 ASSEMBLY COMPLETE, NO ERRORS FOUND, NO WARNINGS
 
 

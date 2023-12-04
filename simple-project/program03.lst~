@@ -1,13 +1,11 @@
-program02                                                                                                               PAGE 1
-                         1     ORG 0 ;Start
-                         2
-0000 7400                3     MOV A, #0D ;MOVE 0 TO @A
-                         4
-                         5     MAIN_LOOP: ;MAIN_LOOP function
-0002 04                  6             INC A ;Increment @A value
-0003 B409FC              7             CJNE A, #9D, MAIN_LOOP ;Conpare and Jump if @A is not equal to 9 jump to MAIN_LOOP function
-                         8
-                         9     END ;End
+program03                                                                                                               PAGE 1
+                         1     ORG 0x0000  ; Início do programa
+0000 758001              2     MOV  P0, #1  ; Carrega o valor 10 em P1 (a)
+0003 759002              3     MOV  P1, #2   ; Carrega o valor 5 em P2 (b)
+0006 E580                4     MOV  A, P0    ; Move o valor de P1 para o registrador A (aux)
+0008 859080              5     MOV  P0, P1   ; Move o valor de P2 para P1 (a)
+000B F590                6     MOV  P1, A    ; Move o valor de A (aux) para P2 (b)
+                         7     END  ; Fim do programa
 ASSEMBLY COMPLETE, NO ERRORS FOUND, NO WARNINGS
 
 
@@ -102,12 +100,11 @@ IT1. . . . . . . . . . . . . . . . .  B  ADDR  008AH  NOT USED
 KBE. . . . . . . . . . . . . . . . .  D  ADDR  009DH  NOT USED
 KBF. . . . . . . . . . . . . . . . .  D  ADDR  009EH  NOT USED
 KBLS . . . . . . . . . . . . . . . .  D  ADDR  009CH  NOT USED
-MAIN_LOOP. . . . . . . . . . . . . .  C  ADDR  0002H
 OSCCON . . . . . . . . . . . . . . .  D  ADDR  0086H  NOT USED
 OV . . . . . . . . . . . . . . . . .  B  ADDR  00D2H  NOT USED
 P. . . . . . . . . . . . . . . . . .  B  ADDR  00D0H  NOT USED
-P0 . . . . . . . . . . . . . . . . .  D  ADDR  0080H  NOT USED
-P1 . . . . . . . . . . . . . . . . .  D  ADDR  0090H  NOT USED
+P0 . . . . . . . . . . . . . . . . .  D  ADDR  0080H
+P1 . . . . . . . . . . . . . . . . .  D  ADDR  0090H
 P1M1 . . . . . . . . . . . . . . . .  D  ADDR  00D4H  NOT USED
 P1M2 . . . . . . . . . . . . . . . .  D  ADDR  00E2H  NOT USED
 P2 . . . . . . . . . . . . . . . . .  D  ADDR  00A0H  NOT USED

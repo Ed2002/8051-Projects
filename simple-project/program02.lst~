@@ -4,8 +4,8 @@ program02                                                                       
 0000 7400                3     MOV A, #0D
                          4
                          5     MAIN_LOOP:
-0002 2401                6             ADD A, #1D
-0004 B409FB              7             CJNE A, #9D, MAIN_LOOP
+0002 04                  6             INC A
+0003 B409FC              7             CJNE A, #9D, MAIN_LOOP
                          8     END ;End
 ASSEMBLY COMPLETE, NO ERRORS FOUND, NO WARNINGS
 

@@ -1,13 +1,10 @@
-program02                                                                                                               PAGE 1
+program01                                                                                                               PAGE 1
                          1     ORG 0 ;Start
-                         2
-0000 7400                3     MOV A, #0D ;MOVE 0 TO @A
-                         4
-                         5     MAIN_LOOP: ;MAIN_LOOP function
-0002 04                  6             INC A ;Increment @A value
-0003 B409FC              7             CJNE A, #9D, MAIN_LOOP ;Conpare and Jump if @A is not equal to 9 jump to MAIN_LOOP function
-                         8
-                         9     END ;End
+0000 740A                2     MOV A, #10D ;Move 10 to @A register
+0002 781E                3     MOV R0, #30D ;Move 30 to @R0 register
+0004 28                  4     ADD A, R0 ;Add to @A register value @R0 register value
+0005 F9                  5     MOV R1, A ;Move @A register value to @R0 register
+                         6     END ;End
 ASSEMBLY COMPLETE, NO ERRORS FOUND, NO WARNINGS
 
 
@@ -102,7 +99,6 @@ IT1. . . . . . . . . . . . . . . . .  B  ADDR  008AH  NOT USED
 KBE. . . . . . . . . . . . . . . . .  D  ADDR  009DH  NOT USED
 KBF. . . . . . . . . . . . . . . . .  D  ADDR  009EH  NOT USED
 KBLS . . . . . . . . . . . . . . . .  D  ADDR  009CH  NOT USED
-MAIN_LOOP. . . . . . . . . . . . . .  C  ADDR  0002H
 OSCCON . . . . . . . . . . . . . . .  D  ADDR  0086H  NOT USED
 OV . . . . . . . . . . . . . . . . .  B  ADDR  00D2H  NOT USED
 P. . . . . . . . . . . . . . . . . .  B  ADDR  00D0H  NOT USED

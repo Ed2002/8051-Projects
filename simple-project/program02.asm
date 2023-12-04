@@ -1,0 +1,8 @@
+ORG 0 ;Start
+
+MOV A, #0D
+
+MAIN_LOOP:
+	INC A
+	CJNE A, #9D, MAIN_LOOP
+END ;End
